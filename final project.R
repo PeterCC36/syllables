@@ -58,7 +58,7 @@ par(mfrow = c(1, 1))
 plot(cluster, cex=0.5)
 rect.hclust(cluster, 8)
 
-#record the classification value
+#record the classification value of k-medoids
 k8 <- pam.clustering(eu.dist, 8)
 syllabus$cluster8 <- k8
 
@@ -91,7 +91,7 @@ plot(scores(ca)$site,pch=c(19,19,1)[loc.comb], col=c("#ffa801","#000000","#00000
 legend("topright", legend = levels(loc.comb), bty="n", pch=c(19,19,1), col=c("#ffa801","#000000","#000000"), xpd=T, inset = c(-0.15, 0))
 
 ordiellipse(ca, loc.comb, lty=c(1, 1, 4), col = c("#b15928","#000000","#000000"), label = T, draw = "line", kind = "sd", lwd=1.5)
-#Functions to add convex hulls, ¡§spider¡¨ graphs, ellipses or cluster dendrogram to ordination diagrams. The ordination diagrams can be produced by vegan plot.cca, plot.decorana or ordiplot.
+#Functions to add convex hulls, Â¡Â§spiderÂ¡Â¨ graphs, ellipses or cluster dendrogram to ordination diagrams. The ordination diagrams can be produced by vegan plot.cca, plot.decorana or ordiplot.
 
 #chi-square test
 chisquare <- read.csv('https://raw.githubusercontent.com/PeterCC36/syllables/main/qisquare.csv')
