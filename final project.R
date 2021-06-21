@@ -2,7 +2,8 @@ syllabus <- read.csv('https://raw.githubusercontent.com/PeterCC36/syllables/main
 
 library(vegan)
 
-pam.clustering = function(x,k) { # x is a distance matrix and k the number of clusters
+pam.clustering = function(x,k) 
+{ # x is a distance matrix and k the number of clusters
   require(cluster)
   cluster = as.vector(pam(as.dist(x), k, diss = TRUE)$clustering)
   return(cluster)
@@ -41,13 +42,14 @@ summary(aov(length$Length ~ length$Species))
 summary(aov(rate$Note.rate ~ rate$Species))
 
 #Tukey
+#Syllable duration and song length are not significantly different in ANOVA, so we don't do further test since Tukey HSD is post-hoc test.
 par(mfrow = c(2, 4))
 plot(TukeyHSD(aov(min.freq$min.freq ~ min.freq$species)))
 plot(TukeyHSD(aov(max.freq$max.freq ~ max.freq$species)))
 plot(TukeyHSD(aov(freq.range$freq.range ~ freq.range$species)))
-plot(TukeyHSD(aov(duration$duration ~ duration$species)))
+#plot(TukeyHSD(aov(duration$duration ~ duration$species)))
 plot(TukeyHSD(aov(nsyllable$Number.of.syllable ~ nsyllable$Species)))
-plot(TukeyHSD(aov(length$Length ~ length$Species)))
+#plot(TukeyHSD(aov(length$Length ~ length$Species)))
 plot(TukeyHSD(aov(rate$Note.rate ~ rate$Species)))
 
 #draw a cluster analysis dendrogram
