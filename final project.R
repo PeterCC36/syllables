@@ -69,12 +69,14 @@ NMDS <- metaMDS(types, group = as.factor(syllabus$cluster8), distance = 'euclidi
 ordiplot(NMDS, display = 'sites', type = 'n')
 points (NMDS, pch = 20, col = k8, cex = 2)
 legend('right', c('1', '2', '3', '4', '5', '6', '7', '8'), fill = c(1:8))
+plot(envfit(NMDS, types[, 1:4])) #see relationship between each trait and ordination axis.
 
 #PCoA
 pcoa <- cmdscale (eu.dist, eig = TRUE)
 ordiplot(pcoa, display = 'sites', type = 'n')
 points (pcoa$points, pch = 20, col = k8, cex = 2)
 legend('right', c('1', '2', '3', '4', '5', '6', '7', '8'), fill = c(1:8))
+plot(envfit(pcoa, types[, 1:4])) #see relationship between each trait and ordination axis.
 
 #CA
 data <- syllabus
