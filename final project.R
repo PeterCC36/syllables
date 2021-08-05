@@ -23,13 +23,12 @@ length = song[, c(6, 3)]
 rate = song[, c(6, 4)]
 
 par(mfrow = c(2, 4))
-boxplot(min.freq$min.freq ~ min.freq$species, las = 1, xlab = 'Species', ylab = 'Frequency(Hz)'
-        , main = 'Minimum Frequency', col = c('grey40', 'grey60', 'grey90'))
-boxplot(max.freq$max.freq ~ max.freq$species, las = 1, xlab = 'Species', ylab = 'Frequency(Hz)', main = 'Maximum Frequency', col = c('grey40', 'grey60', 'grey90'))
-boxplot(freq.range$freq.range ~ freq.range$species, las = 1, xlab = 'Species', ylab = 'Frequency(Hz)', main = 'Frequency Range', col = c('grey40', 'grey60', 'grey90'))
+boxplot(min.freq$min.freq ~ min.freq$species, las = 1, xlab = 'Species', ylab = 'Frequency(Hz)', main = 'Minimum frequency', col = c('grey40', 'grey60', 'grey90'))
+boxplot(max.freq$max.freq ~ max.freq$species, las = 1, xlab = 'Species', ylab = 'Frequency(Hz)', main = 'Maximum frequency', col = c('grey40', 'grey60', 'grey90'))
+boxplot(freq.range$freq.range ~ freq.range$species, las = 1, xlab = 'Species', ylab = 'Frequency(Hz)', main = 'Frequency range', col = c('grey40', 'grey60', 'grey90'))
 boxplot(duration$duration ~ duration$species, las = 1, xlab = 'Species', ylab = 'Duration(s)', main = 'Syllable Duration', col = c('grey40', 'grey60', 'grey90'))
-boxplot(nsyllable$Number.of.syllable ~ nsyllable$Species, las = 1, xlab = 'Species', ylab = 'Number', main = 'Number of Syllables', col = c('grey40', 'grey60', 'grey90'))
-boxplot(length$Length ~ length$Species, las = 1, xlab = 'Species', ylab = 'Time(seconds)', main = 'Song Duration', col = c('grey40', 'grey60', 'grey90'))
+boxplot(nsyllable$Number.of.syllable ~ nsyllable$Species, las = 1, xlab = 'Species', ylab = 'Number', main = 'Number of syllables', col = c('grey40', 'grey60', 'grey90'))
+boxplot(length$Length ~ length$Species, las = 1, xlab = 'Species', ylab = 'Time(seconds)', main = 'Song duration', col = c('grey40', 'grey60', 'grey90'))
 boxplot(rate$Note.rate ~ rate$Species, las = 1, xlab = 'Species', ylab = 'syllables/second', main = 'Syllable rate', col = c('grey40', 'grey60', 'grey90'))
 
 #ANOVA
